@@ -1,0 +1,91 @@
+<grammar version="1.0"
+         mode="voice"
+         xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar grammar.xsd"
+         xml:lang="fr-FR" root="command" tag-format="semantics/1.0">
+
+  <!-- Règle principale -->
+  <rule id="command" scope="public"> 
+    <ruleref special="GARBAGE" />
+    <one-of>
+      <!-- Commandes pour la création -->
+      <item>
+        <ruleref uri="#create"/>
+        <tag>out="action='create';";</tag>
+      </item>
+
+      <!-- Commandes pour changer la couleur -->
+      <item>
+        <ruleref uri="#changeColor"/>
+        <tag>out="action='changeColor';color=rules.color;";</tag>
+      </item>
+
+      <!-- Commandes pour capturer les points -->
+      <item>
+        <ruleref uri="#capturePoints"/>
+        <tag>out="action='capture';points=rules.capture;";</tag>
+      </item>
+    </one-of>
+    <ruleref special="GARBAGE" />
+  </rule>
+
+  <!-- Règle pour créer des formes -->
+  <rule id="create">
+    <one-of>
+      <item>
+        créer une forme
+        <tag>out="action='create';";</tag>
+      </item>
+      <item>
+        dessine une forme
+        <tag>out="action='create';";</tag>
+      </item>
+      <item>
+        créer une forme en <ruleref uri="#color"/>
+        <tag>out="action='create';color=rules.color;";</tag>
+      </item>
+      <item>
+        dessine en <ruleref uri="#color"/>
+        <tag>out="action='create';color=rules.color;";</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <!-- Règle pour changer la couleur -->
+  <rule id="changeColor">
+    <one-of>
+      <item>
+        change la couleur en <ruleref uri="#color"/>
+        <tag>out="action='changeColor';color=rules.color;";</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <!-- Règle pour capturer les points -->
+  <rule id="capturePoints">
+    <one-of>
+      <item>
+        de ici
+        <tag>out="points='de ici';";</tag>
+      </item>
+      <item>
+        à là
+        <tag>out="points='à là';";</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <!-- Règle pour les couleurs -->
+  <rule id="color">
+    <one-of>
+      <item>rouge<tag>out="rouge";</tag></item>
+      <item>vert<tag>out="vert";</tag></item>
+      <item>bleu<tag>out="bleu";</tag></item>
+      <item>jaune<tag>out="jaune";</tag></item>
+      <item>noir<tag>out="noir";</tag></item>
+      <item>blanc<tag>out="blanc";</tag></item>
+    </one-of>
+  </rule>
+
+</grammar>
