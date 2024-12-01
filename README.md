@@ -57,7 +57,7 @@ Une fois les deux services en marche, vous pouvez :
 
 
 ### **Vidéos de démonstration**
-Pour voir des exemples d'utilisation, consultez les vidéos suivantes dans le dossier `vidéo` :
+Pour voir des exemples d'utilisation, téléchargez et consultez les vidéos suivantes dans le dossier `vidéo` :
 - [ligne.mp4](vidéo/ligne.mp4) : Démonstration de la création d'une ligne.
 - [rectangle.mp4](vidéo/rectangle.mp4) : Démonstration de la création d'un rectangle.
 - [multiforme.mp4](vidéo/multiforme.mp4) : Démonstration de la création de plusieurs formes.
