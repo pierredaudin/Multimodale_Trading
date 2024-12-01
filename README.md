@@ -1,7 +1,7 @@
-# **Application de Trading Multimodale**
+# Application de Trading Multimodale
 
 ## **Aperçu**
-L'application de trading multimodale est une interface interactive qui combine des commandes vocales et des gestes pour une expérience utilisateur intuitive. Elle intègre un graphique de trading dynamique et permet de tracer des formes comme des lignes ou des rectangles sur ce graphique.
+L'application de trading multimodale est une interface interactive qui combine des commandes vocales et des gestes pour une expérience utilisateur intuitive. Elle intègre un graphique de trading dynamique et permet de tracer des formes comme des lignes ou des rectangles sur ce graphique. Pour plus de détails sur la partie technique, voir le [Rapport Technique](Rapport/RAPPORT.md).
 
 ## **Installation**
 
